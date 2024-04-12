@@ -1,4 +1,4 @@
-import { Server } from '../server-interface'
+import { Server, CredentialsProvider } from '../server-interface'
 
 /**
  * Properties used for runtime initialisation
@@ -16,4 +16,8 @@ export type RuntimeProps = {
      * Name of the server used inside the runtime
      */
     name: string
+    /**
+     * Credential provider to overwrite the default Auth mechanism over LSP. 
+     */
+    credentialsProvider?: CredentialsProvider
 }
